@@ -1,0 +1,10 @@
+{
+  "name": "angular-karma-module-config-testcase",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-mocks": "~1.4.0"
+  }
+}
