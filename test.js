@@ -2,7 +2,7 @@
 
 angular.module('myModule', []).config(['$http', '$log', function($http, $log) {
 	$http.get('/api/getkey').then(function success(response) {
-		$log(response.data);
+		$log.log(response.data);
 	});
 }]);
 
