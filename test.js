@@ -1,15 +1,11 @@
 'use strict';
 
-angular.module('myModule', []).config(['$http', '$log', function($http, $log) {
-	$http.get('/api/getkey').then(function success(response) {
-		$log.log(response.data);
-	});
+angular.module('myModule', []).config(['$httpProvider', function($httpProvider) {
+	$httpProvider.useApplyAsync(true);
 }]);
 
 describe('myModule', function() {
-	it('logs a key obtained from XHR', inject(function($httpBackend) {
-		$httpBackend.expectGET('/api/getkey').respond(200, '12345');
-		angular.module('myModule');
-		$httpBackend.flush();
+	it('configures the $http service to combine response processing via $applyAsync', inject(function($httpProvider) {
+		expect($httpProvider.useApplyAsync()).toBeTruthy();
 	}));
 });

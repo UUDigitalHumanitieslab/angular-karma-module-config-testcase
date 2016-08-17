@@ -6,6 +6,9 @@ To try the attempt in the testcase:
 
 You will get:
 
-    Error: No pending request to flush !
+    Error: [$injector:unpr] Unknown provider: $httpProviderProvider <- $httpProvider
+    ...
+    @/path/to/testcase/test.js:8:84
+    @/path/to/testcase/test.js:7:1
 
 If you find the solution, please make a fork and publish your solution in a pull request. Thanks in advance.
